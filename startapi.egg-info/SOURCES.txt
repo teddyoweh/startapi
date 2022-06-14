@@ -1,0 +1,11 @@
+LICENSE
+LICENSE.TXT
+README.md
+setup.cfg
+setup.py
+startapi/__init__.py
+startapi/startapi.py
+startapi.egg-info/PKG-INFO
+startapi.egg-info/SOURCES.txt
+startapi.egg-info/dependency_links.txt
+startapi.egg-info/top_level.txt
