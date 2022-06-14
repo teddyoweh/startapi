@@ -11,7 +11,7 @@ from startapi import startapi
 startapi()
 ```
 ##### Save the python file, eg (makeapi.py)
-### Running
+
 
 ### Using Arguments 
 ```sh
@@ -23,7 +23,7 @@ options:
   --f FRAMEWORK  API Framework to use [Flask, FastAPI].
 ```
 
-
+### Running
 ```sh
 $ python3 makeapi.py --a myapi --f fastapi
 ```
