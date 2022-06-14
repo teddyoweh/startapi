@@ -4,8 +4,8 @@ from huepy import red
 from huepy import green
 from huepy import yellow
 import argparse
-
-
+import requests, zipfile, io
+import shutil
  
 # - @author: teddyoweh
 # - @website: https://teddyoweh.net:
@@ -37,9 +37,23 @@ class startAPI:
         print(self.credits)
         self.dest= os.getcwd()
         self.src='template'
-        
-        if self.framework == 'Flask':self._buildflask()
+        print('\n')
+        yelapp= yellow(self.apiname)
+        print(f'-[#] Building {yelapp} API CodeBase')
+        if self.framework == 'Flask':
+           
+            self._buildflask()
+            os.chdir(self.apiname)
+            os.system('dir')
+            newname = 'flaskboilerplate-main'
+            nedwname = self.apiname
+            bix =f'ren {newname} {nedwname}'
+            print(bix)
+            os.system(bix)
+             
+            
         else: self.buildfastapi()
+        
             
     def args(self):
         parser = argparse.ArgumentParser("startapi")
@@ -51,14 +65,12 @@ class startAPI:
         self.framework= args.framework
  
     def _buildflask(self):
-        os.mkdir(self.apiname)
-        os.mkdir(self.apiname+'/'+'api')
-        os.mkdir(self.apiname+'/'+'app')
-        os.mkdir(self.apiname+'/'+'config')
-        os.mkdir(self.apiname+'/'+'tests')
-        open(self.apiname+'/run.py','w').write(self.runpy)
-        print('flask')
-        pass
+        self.mainurl='https://github.com/teddyoweh/flaskboilerplate/archive/refs/heads/main.zip'
+        
+        r = requests.get(self.mainurl)
+        z = zipfile.ZipFile(io.BytesIO(r.content))
+        z.extractall(self.apiname)
+        
  
     def _buildfastapi(self):
         print('fastapi')
