@@ -18,10 +18,10 @@ import os
  
     
 
-class startAPI:
+class startapi:
     def __init__(self):
         self.args()
-        self._codes()
+        
         self.appname='STARTAPI'
         
         self.credits= """
@@ -43,7 +43,7 @@ class startAPI:
        
         if self.framework.lower() == 'flask':
             print(f'-[#] Building {yelapp} FLASK API CodeBase')
-            self._build('flaskboilerplate ')
+            self._build('flaskboilerplate')
             print(f'-[+] Building {yelapp} FLASK API CodeBase Complete')
             
             
@@ -60,7 +60,7 @@ class startAPI:
         parser = argparse.ArgumentParser("startapi")
 
         parser.add_argument("--a", dest='appname', help="API Service Name .", type=str)
-        parser.add_argument("--f", dest='framework',help="API Framework to use [Flask, FastAPI].",default='Flask', type=str)
+        parser.add_argument("--f", dest='framework',choices=['Flask', 'FastAPI'],help="API Framework to use [Flask, FastAPI].",default='Flask', type=str)
         args = parser.parse_args()
         self.apiname=args.appname
         self.framework= args.framework
@@ -81,9 +81,8 @@ class startAPI:
         
  
 
-        
     
         
         
         
-startAPI()
+startapi()
