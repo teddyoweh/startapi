@@ -6,6 +6,7 @@ from huepy import yellow
 import argparse
 import requests, zipfile, io
 import shutil
+import os
  
 # - @author: teddyoweh
 # - @website: https://teddyoweh.net:
@@ -13,7 +14,7 @@ import shutil
 # - @twitter: https://twitter.com/tedddyoweh
 # - @mail: teddy@teddyoweh.net
 # - @message: reach out for contributions or questions ;)!
-import os
+
  
     
 
@@ -79,14 +80,7 @@ class startAPI:
      
         
  
-    def _buildfastapi(self):
-        print('fastapi')
-    def _codes(self):
-        
-        self.runpy ="""from app import create_app\napp = create_app('config.development')\nif __name__ == '__main__':\tapp.run()
-        """
-    def __repr__(self):
-        pass
+
         
     
         
