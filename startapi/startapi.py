@@ -54,8 +54,7 @@ class startapi:
             print(f'-[#] Building {yelapp} FASTAPI CodeBase')
             self._build('fastapiboilerplate')
             print(f'-[+] Building {yelapp} FASTAPI CodeBase Complete')
-            
-            
+               
     def args(self):
         parser = argparse.ArgumentParser("startapi")
 
