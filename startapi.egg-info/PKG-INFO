@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: startapi
+Version: 0.1
+Summary: A command line interface aplication to create boilerplate code for developing APIs
+Home-page: https://github.com/teddy/startapi
+Author: teddyoweh
+Author-email: teddy@teddyoweh.net
+License: MIT
+Download-URL: https://github.com/teddyoweh/startapi/archive/refs/tags/api.zip
+Keywords: startapi,FastAPI,FlaskAPI,API BOILERPLATE
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: LICENSE.TXT
+
+# StartApi
+ A command line interface aplication to create boilerplate code for developing APIs Using either of the two most popular python modules, Flask and FastAPI 
+
+## Installation
+```sh
+$ pip install startapi
+```
+## Usage
+```py 
+from startapi import startapi
+startapi()
+```
+##### Save the python file, eg (makeapi.py)
+
+
+### Using Arguments 
+```sh
+usage: startapi [-h] [--a APPNAME] [--f FRAMEWORK]
+
+options:
+  -h, --help     show this help message and exit
+  --a APPNAME    API Service Name .
+  --f FRAMEWORK  API Framework to use [Flask, FastAPI].
+```
+
+### Running
+```sh
+$ python3 makeapi.py --a myapi --f fastapi
+```
+
+
